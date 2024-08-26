@@ -10,6 +10,15 @@
 .svn/
 migrate_working_dir/
 
+# **.g.dart
+**.lock
+*.config.dart
+.DS_Store
+.atom/
+.buildlog/
+.history
+.svn/
+
 # IntelliJ related
 *.iml
 *.ipr
@@ -41,3 +50,11 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+pubspec.lock
+
+GoogleService-Info.plist
+
+**/google-services.json
+
+# enviroment variables file
+.env

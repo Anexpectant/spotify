@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:spotify/core/utils/services/di/injection.dart';
 
-void main() {
+void main() async {
+  await startUp();
   runApp(const MyApp());
+}
+
+startUp() async {
+  configureDependencies();
 }
 
 class MyApp extends StatelessWidget {
