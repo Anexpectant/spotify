@@ -57,4 +57,4 @@ GoogleService-Info.plist
 **/google-services.json
 
 # enviroment variables file
-.env
+*.env
