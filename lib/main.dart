@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:spotify/core/utils/services/di/injection.dart';
+import 'package:spotify/core/utils/services/env_variables/env_variables.dart';
 import 'package:spotify/core/utils/services/local_db/hive/hive_db.dart';
 
 void main() async {
@@ -8,6 +9,7 @@ void main() async {
 }
 
 startUp() async {
+  initializeDotEnv();
   initHive();
   configureDependencies();
 }
