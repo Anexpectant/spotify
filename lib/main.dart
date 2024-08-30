@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spotify/core/utils/services/appmetrica/appmetrica_service.dart';
 import 'package:spotify/core/utils/services/di/injection.dart';
 import 'package:spotify/core/utils/services/env_variables/env_variables.dart';
 import 'package:spotify/core/utils/services/local_db/hive/hive_db.dart';
@@ -9,7 +10,8 @@ void main() async {
 }
 
 startUp() async {
-  initializeDotEnv();
+  await initializeDotEnv();
+  initializeAppmetrica();
   initHive();
   configureDependencies();
 }
@@ -66,6 +68,12 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
+
+  @override
+  initState() {
+    getIt<AppMetricaAnalytic>().reportEvent(AnalyticEvents.MAIN_PAGE);
+    super.initState();
+  }
 
   void _incrementCounter() {
     setState(() {
