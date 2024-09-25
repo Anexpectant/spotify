@@ -17,3 +17,10 @@ const darkGrey = Color(0xFF343434);
 // backGround colors
 const lightBackground = Color(0xFFf2f2f2);
 const darkBackground = Color(0xFF0d0c0c);
+
+// other color
+const dimBlackColor = Color(0xFF424e4d);
+
+const kBodyTextColor = Color.fromARGB(255, 34, 40, 49);
+const dangerTextColor = Color(0xFFff667c);
+const scaffoldBackgroundColor = Color.fromARGB(255, 252, 252, 252);
