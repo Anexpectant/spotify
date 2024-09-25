@@ -27,6 +27,7 @@ dependencies:
   appmetrica_plugin: ^2.1.1
   oktoast: ^3.4.0
   equatable: ^2.0.5
+  flutter_svg: ^2.0.10+1
 
 dev_dependencies:
   flutter_test:
