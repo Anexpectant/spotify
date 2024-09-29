@@ -22,8 +22,7 @@ import 'package:spotify/src/base/data/data_sources/config_local_data_source.dart
     as _i1021;
 import 'package:spotify/src/base/data/data_sources/user_local_data_source.dart'
     as _i666;
-import 'package:spotify/src/intro/%20presentation/pages/intro_page.dart'
-    as _i341;
+import 'package:spotify/src/intro/presentation/pages/intro_page.dart' as _i621;
 
 const String _dev = 'dev';
 
@@ -43,7 +42,7 @@ _i174.GetIt $initGetIt(
     registerFor: {_dev},
   );
   gh.factory<_i745.ApplicationEntry>(() => _i745.ApplicationEntry());
-  gh.factory<_i341.IntroPage>(() => _i341.IntroPage());
+  gh.factory<_i621.IntroPage>(() => _i621.IntroPage());
   gh.singleton<_i570.AlertHandlerCubit>(() => _i570.AlertHandlerCubit());
   gh.singleton<_i787.AppMetricaAnalytic>(() => _i787.AppMetricaAnalytic());
   gh.singleton<_i228.Logger>(() => _i228.Logger());
