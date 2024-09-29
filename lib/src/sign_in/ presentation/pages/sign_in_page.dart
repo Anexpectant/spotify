@@ -6,8 +6,6 @@ import 'package:spotify/src/base/presentation/pages/page_wrapper.dart';
 class SignInPage extends StatefulWidget {
   static const String id = 'SignInPage';
 
-  const SignInPage({super.key});
-
   @override
   State<SignInPage> createState() => _SignInPageState();
 }

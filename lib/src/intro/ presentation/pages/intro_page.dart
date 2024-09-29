@@ -7,7 +7,6 @@ import 'package:spotify/src/base/presentation/pages/page_wrapper.dart';
 @injectable
 class IntroPage extends StatefulWidget {
   static const String id = 'IntroPage';
-  const IntroPage({super.key});
 
   @override
   State<IntroPage> createState() => _IntroPageState();

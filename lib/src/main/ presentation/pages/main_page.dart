@@ -6,8 +6,6 @@ import 'package:spotify/src/base/presentation/pages/page_wrapper.dart';
 class MainPage extends StatefulWidget {
   static const String id = 'MainPage';
 
-  const MainPage({super.key});
-
   @override
   State<MainPage> createState() => _MainPageState();
 }
