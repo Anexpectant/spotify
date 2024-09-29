@@ -27,6 +27,10 @@ extension AnalyticEventExtension on AnalyticEvents {
   String get text {
     switch (this) {
       // pages
+      case AnalyticEvents.INTRO_PAGE:
+        return "intro_page";
+      case AnalyticEvents.SIGN_IN_PAGE:
+        return "sign_in_page";
       case AnalyticEvents.MAIN_PAGE:
         return "main_page";
     }
@@ -35,5 +39,7 @@ extension AnalyticEventExtension on AnalyticEvents {
 
 enum AnalyticEvents {
   // pages
+  INTRO_PAGE,
+  SIGN_IN_PAGE,
   MAIN_PAGE,
 }
