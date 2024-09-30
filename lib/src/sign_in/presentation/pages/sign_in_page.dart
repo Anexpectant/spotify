@@ -19,6 +19,9 @@ class _SignInPageState extends PageWrapper<SignInPage> {
 
   @override
   Widget buildPage(BuildContext context) {
-    return Container();
+    return Container(
+      height: double.infinity,
+      color: Colors.blue,
+    );
   }
 }

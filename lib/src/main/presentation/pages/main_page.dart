@@ -19,6 +19,9 @@ class _MainPageState extends PageWrapper<MainPage> {
 
   @override
   Widget buildPage(BuildContext context) {
-    return Container();
+    return Container(
+      height: double.infinity,
+      color: Colors.yellow,
+    );
   }
 }
