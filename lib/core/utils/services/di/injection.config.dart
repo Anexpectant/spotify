@@ -23,6 +23,7 @@ import 'package:spotify/src/base/data/data_sources/config_local_data_source.dart
 import 'package:spotify/src/base/data/data_sources/user_local_data_source.dart'
     as _i666;
 import 'package:spotify/src/intro/presentation/pages/intro_page.dart' as _i621;
+import 'package:spotify/src/splash/domain/bloc/initializer_cubit.dart' as _i498;
 
 const String _dev = 'dev';
 
@@ -46,6 +47,7 @@ _i174.GetIt $initGetIt(
   gh.singleton<_i570.AlertHandlerCubit>(() => _i570.AlertHandlerCubit());
   gh.singleton<_i787.AppMetricaAnalytic>(() => _i787.AppMetricaAnalytic());
   gh.singleton<_i228.Logger>(() => _i228.Logger());
+  gh.singleton<_i498.InitializerCubit>(() => _i498.InitializerCubit());
   gh.factory<_i1021.ConfigLocalDataSource>(
     () => _i1021.ConfigLocalDataSource(),
     registerFor: {_dev},

@@ -51,10 +51,7 @@ flutter:
 
   assets:
     - assets/
-    - assets/animations/
     - assets/icons/
-    - assets/pictures/
-    - assets/place_holders/
 
     # Environment variables file
     - .env

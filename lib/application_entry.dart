@@ -4,11 +4,14 @@ import 'package:injectable/injectable.dart';
 import 'package:oktoast/oktoast.dart';
 import 'package:spotify/core/styles/themes.dart';
 import 'package:spotify/core/utils/scroll_behavior/custom_scroll_behavior.dart';
+import 'package:spotify/core/utils/services/alert_handler/alert_handler_cubit.dart';
 import 'package:spotify/core/utils/services/di/injection.dart';
 import 'package:spotify/core/utils/services/localization/languages.dart';
 import 'package:spotify/core/utils/services/logger/logger.dart';
 import 'package:spotify/core/utils/services/navigation/route_and_navigation_helper.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:spotify/src/splash/domain/bloc/initializer_cubit.dart';
+import 'package:spotify/src/splash/presentation/pages/splash_page.dart';
 
 @injectable
 class ApplicationEntry extends StatefulWidget {
@@ -22,7 +25,12 @@ class _ApplicationEntryState extends State<ApplicationEntry> {
     SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
 
     return MultiBlocProvider(
-        providers: [],
+        providers: [
+          BlocProvider.value(
+            value: getIt<AlertHandlerCubit>(),
+          ),
+          BlocProvider.value(value: getIt<InitializerCubit>()),
+        ],
         child: MaterialApp(
           title: 'اسپاتیفای',
           onGenerateRoute: generateRoute,
@@ -44,7 +52,7 @@ class _ApplicationEntryState extends State<ApplicationEntry> {
               child: widget,
             );
           },
-          home: Container(),
+          home: const SplashPage(),
         ));
   }
 }

@@ -21,6 +21,9 @@ class _IntroPageState extends PageWrapper<IntroPage> {
 
   @override
   Widget buildPage(BuildContext context) {
-    return Container();
+    return Container(
+      height: double.infinity,
+      color: Colors.red,
+    );
   }
 }

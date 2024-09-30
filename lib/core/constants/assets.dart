@@ -10,13 +10,13 @@ class Assets {
   static const String PLACEHOLDER = "placeHolder/";
   static const String PICTURES = "picture/";
 
-  // Animation-Directory  
+  // Animation-Directory
 
   // Icons-Directory
+  static const String IC_SPOTIFY_LOGO_NAME =
+      "$BASE${ICONS}ic_spotify_logo_name$SVG";
 
   // Placeholders-Directory
-  
-  // Pictures-Directory
-  
-}
 
+  // Pictures-Directory
+}
