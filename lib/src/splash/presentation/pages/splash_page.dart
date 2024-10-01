@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:spotify/core/constants/assets.dart';
-import 'package:spotify/core/constants/numbers/spacings.dart';
 import 'package:spotify/core/utils/services/di/injection.dart';
 import 'package:spotify/core/utils/services/logger/logger.dart';
 import 'package:spotify/src/base/data/data_sources/base_local_data_source.dart';
@@ -53,13 +52,15 @@ class _SplashPageState extends PageWrapper<SplashPage> {
         }
       },
       child: Container(
-        width: MediaQuery.of(context).size.width,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            SvgPicture.asset(Assets.IC_SPOTIFY_LOGO_NAME,
-                width: Spacings.size3Xl, height: Spacings.size3Xl),
-          ],
+        color: Colors.white,
+        alignment: Alignment.center,
+        child: Container(
+          margin: EdgeInsets.symmetric(
+            horizontal: MediaQuery.of(context).size.width * 0.25,
+          ),
+          child: SvgPicture.asset(
+            Assets.IC_SPLASH_LOGO,
+          ),
         ),
       ),
     );

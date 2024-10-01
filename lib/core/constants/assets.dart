@@ -13,8 +13,7 @@ class Assets {
   // Animation-Directory
 
   // Icons-Directory
-  static const String IC_SPOTIFY_LOGO_NAME =
-      "$BASE${ICONS}ic_spotify_logo_name$SVG";
+  static const String IC_SPLASH_LOGO = BASE + ICONS + "ic_splash_logo" + SVG;
 
   // Placeholders-Directory
 
