@@ -58,4 +58,21 @@ abstract class Languages {
 
   // ------------- general
   String get appName;
+
+  // ------------- failure messages
+  String get fetchDataFailureMessage;
+
+  String get noConnectionFailureMessage;
+
+  String get errorHasOccurred;
+
+  String get tryAgain;
+
+  String get tokenExpiredFailureMessage;
+
+  String get errorOccurredFailureMessage;
+
+  String get accessDeniedFailureMessage;
+
+  String get connectionFailureMessage;
 }
