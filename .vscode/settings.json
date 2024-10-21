@@ -3,5 +3,6 @@
         "Appmetrica",
         "Cupertino",
         "dotenv"
-    ]
+    ],
+    "cmake.sourceDirectory": "/home/anexpectant/spotify/linux"
 }

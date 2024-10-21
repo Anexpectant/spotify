@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:spotify/core/utils/services/appmetrica/appmetrica_service.dart';
 import 'package:spotify/core/utils/services/di/injection.dart';
-import 'package:spotify/src/base/presentation/pages/page_wrapper.dart';
 
 class SignInPage extends StatefulWidget {
   static const String id = 'SignInPage';
@@ -10,7 +9,7 @@ class SignInPage extends StatefulWidget {
   State<SignInPage> createState() => _SignInPageState();
 }
 
-class _SignInPageState extends PageWrapper<SignInPage> {
+class _SignInPageState extends State<SignInPage> {
   @override
   void initState() {
     getIt<AppMetricaAnalytic>().reportEvent(AnalyticEvents.SIGN_IN_PAGE);
@@ -18,7 +17,7 @@ class _SignInPageState extends PageWrapper<SignInPage> {
   }
 
   @override
-  Widget buildPage(BuildContext context) {
+  Widget build(BuildContext context) {
     return Container(
       height: double.infinity,
       color: Colors.blue,
