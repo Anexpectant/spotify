@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:hive/hive.dart';
 import 'package:spotify/core/constants/assets.dart';
 import 'package:spotify/core/utils/services/di/injection.dart';
 import 'package:spotify/core/utils/services/logger/logger.dart';
@@ -13,15 +14,14 @@ import 'package:spotify/src/splash/domain/bloc/initializer_cubit.dart';
 class SplashPage extends StatefulWidget {
   static const String id = 'SplashPage';
   final Token? initialToken;
-  final String? initialChildId;
 
-  const SplashPage({super.key, this.initialToken, this.initialChildId});
+  const SplashPage({super.key, this.initialToken});
 
   @override
   _SplashPageState createState() => _SplashPageState();
 }
 
-class _SplashPageState extends PageWrapper<SplashPage> {
+class _SplashPageState extends State<SplashPage> {
   @override
   void initState() {
     BaseUserLocalDataSource()..init();
@@ -35,12 +35,7 @@ class _SplashPageState extends PageWrapper<SplashPage> {
   }
 
   @override
-  Widget buildAppBar(BuildContext context) {
-    return Container();
-  }
-
-  @override
-  Widget buildPage(BuildContext context) {
+  Widget build(BuildContext context) {
     return BlocListener<InitializerCubit, InitializerState>(
       listener: (BuildContext context, state) {
         getIt<Logger>().debug(state.toString(), title: 'splash listener');
@@ -51,15 +46,21 @@ class _SplashPageState extends PageWrapper<SplashPage> {
               arguments: true);
         }
       },
-      child: Container(
-        color: Colors.white,
-        alignment: Alignment.center,
-        child: Container(
-          margin: EdgeInsets.symmetric(
-            horizontal: MediaQuery.of(context).size.width * 0.25,
-          ),
-          child: SvgPicture.asset(
-            Assets.IC_SPLASH_LOGO,
+      child: Scaffold(
+        body: Container(
+          height: double.infinity,
+          width: double.infinity,
+          color: Colors.red,
+          child:  Center(
+            child: SvgPicture.asset(
+              Assets.IC_SPLASH_LOGO,
+              width: MediaQuery.of(context).size.width *
+                  (Responsive.isMobile(context) ? 0.3 : 0.6),
+              height: MediaQuery.of(context).size.height *
+                  (Responsive.isMobile(context) ? 0.3 : 0.6),
+
+              fit: BoxFit.contain,
+            ),
           ),
         ),
       ),

@@ -8,7 +8,7 @@ class Assets {
   static const String ANIMATION = "animation/";
   static const String ICONS = "icons/";
   static const String PLACEHOLDER = "placeHolder/";
-  static const String PICTURES = "picture/";
+  static const String IMAGES = "images/";
 
   // Animation-Directory
 
@@ -17,5 +17,7 @@ class Assets {
 
   // Placeholders-Directory
 
-  // Pictures-Directory
+  // Images-Directory
+  static const String INTRO_BACKGROUND =
+      BASE + IMAGES + "intro_background" + SVG;
 }

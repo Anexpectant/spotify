@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:spotify/core/utils/services/appmetrica/appmetrica_service.dart';
 import 'package:spotify/core/utils/services/di/injection.dart';
-import 'package:spotify/src/base/presentation/pages/page_wrapper.dart';
 
 class MainPage extends StatefulWidget {
   static const String id = 'MainPage';
@@ -10,7 +9,7 @@ class MainPage extends StatefulWidget {
   State<MainPage> createState() => _MainPageState();
 }
 
-class _MainPageState extends PageWrapper<MainPage> {
+class _MainPageState extends State<MainPage> {
   @override
   void initState() {
     getIt<AppMetricaAnalytic>().reportEvent(AnalyticEvents.MAIN_PAGE);
@@ -18,7 +17,7 @@ class _MainPageState extends PageWrapper<MainPage> {
   }
 
   @override
-  Widget buildPage(BuildContext context) {
+  Widget build(BuildContext context) {
     return Container(
       height: double.infinity,
       color: Colors.yellow,
